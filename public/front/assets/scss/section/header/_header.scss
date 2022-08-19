@@ -1,0 +1,194 @@
+.header {
+    .top-bar {
+        background: #f7f7f7;
+        padding: 10px 0;
+
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            &.contact {
+                justify-content: flex-end;
+            }
+
+            li {
+                margin-right: 15px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                a {
+                    font-size: 14px;
+                    font-family: $fontMid;
+                    color: $bColor;
+                    transition: $transition;
+
+                    &.color,
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+
+        @media (max-width: 991.98px) {
+            flex-wrap: wrap;
+        }
+
+        > div {
+            order: 1;
+        }
+
+        .logo {
+            a {
+                img {
+                    max-width: 190px;
+
+                    @media (max-width: 767.98px) {
+                        max-width: 120px;
+                    }
+                }
+            }
+        }
+
+        .list {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 991.98px) {
+                order: 99;
+                width: 100%;
+                background-color: #f7f7f7;
+                margin-bottom: 10px;
+                display: none;
+            }
+            
+            ul {
+                display: flex;
+                align-items: center;
+
+                @media (max-width: 991.98px) {
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
+            li {
+                margin-left: 10px;
+
+                @media (max-width: 991.98px) {
+                    margin-left: 0;
+                    width: 100%;
+                    border-bottom: 1px solid #ddd;
+
+                    &:last-child {
+                        border: transparent;
+                    }
+                }
+
+                a {
+                    font-size: 14px;
+                    font-family: $fontMid;
+                    color: $primary-color;
+                    transition: $transition;
+                    padding: 6px 12px;
+
+                    @media (max-width: 991.98px) {
+                        display: block;
+                        text-align: center;
+                    }
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: $white;
+                    }
+                }
+            }
+
+        }
+
+        .mobile {
+            width: 45px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-color;
+            cursor: pointer;
+            display: none;
+            margin-left: auto;
+
+            @media (max-width: 991.98px) {
+                display: flex;
+            }
+
+            i {
+                color: $white;
+                font-size: 18px;
+            }
+        }
+
+        .social {
+            margin-left: 20px;
+
+            @media (max-width: 991.98px) {
+                display: none;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                li {
+                    margin-left: 6px;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px;
+                        background-color: $white;
+                        border-radius: 50%;
+                        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .3);
+                        color: $bColor;
+                        transition: $transition;
+
+                        &:hover {
+                            color: $white;
+                        }
+
+                        &.facebook:hover {
+                            background-color: #3b5a9a;
+                        }
+
+                        &.youtube:hover {
+                            background-color: #c3191e;
+                        }
+
+                        &.linkedin:hover {
+                            background-color: #0073b2;
+                        }
+
+                        i {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

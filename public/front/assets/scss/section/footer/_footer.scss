@@ -1,0 +1,132 @@
+.footer {
+    padding-top: 50px;
+    margin-top: 60px;
+    background-color: #f7f7f7;
+
+    h3 {
+        font-size: 22px;
+        margin-bottom: 25px;
+        color: $primary-color;
+    }
+
+    [class^="col"] {
+        margin-bottom: 30px;
+    }
+
+    .contact {
+        ul {
+            li {
+                position: relative;
+                margin-bottom: 10px;
+                padding-left: 20px;
+
+                &::before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    position: absolute;
+                    top: 6px;
+                    left: 0;
+                }
+
+                p,
+                a {
+                    color: $bColor;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    text-decoration: underline;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        ul {
+            display: flex;
+
+            li {
+                margin-right: 10px;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+                    height: 35px;
+                    background-color: #ddd;
+                    transition: $transition;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                    &.facebook {
+                        background-color: #3b5a9a;
+                    }
+
+                    &.youtube {
+                        background-color: #c3191e;
+                    }
+
+                    &.linkedin {
+                        background-color: #0073b2;
+                    }
+
+                    i {
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .news {
+        ul {
+            li {
+                padding: 5px 0;
+                border-bottom: 1px solid #ddd;
+
+                &:last-child {
+                    border-bottom: transparent;
+                }
+
+                a {
+                    color: $bColor;
+                    transition: $transition;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .facebook-page {
+        height: 250px;
+        overflow: hidden;
+    }
+
+    .copyright {
+        background-color: #dbdbdb;
+        padding: 15px 0;
+        text-align: center;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

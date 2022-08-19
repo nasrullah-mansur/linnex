@@ -1,0 +1,10 @@
+@import url("bootstrap-extended.css");
+@import url("colors.css");
+@import url("components.css");
+
+.alert-area {
+    position: fixed;
+    right: 15px;
+    bottom: 0px;
+    z-index: 9999;
+}
