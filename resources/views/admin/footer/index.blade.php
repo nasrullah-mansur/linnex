@@ -23,7 +23,7 @@
                                         <div class="col-md-12 mb-1">
                                             <fieldset class="form-group">
                                                 <label for="contact">Contact</label>
-                                                <textarea name="contact" class="form-control" id="basicTextarea" rows="3">{{ $footer ? $footer->contact : '' }}</textarea>
+                                                <textarea name="contact" class="form-control" rows="3">{{ $footer ? $footer->contact : '' }}</textarea>
                                                 @if ($errors->has('contact'))
                                                 <small class="text-danger">{{ $errors->first('contact') }}</small>
                                                 @endif
@@ -32,7 +32,7 @@
                                         <div class="col-md-12 mb-1">
                                             <fieldset class="form-group">
                                                 <label for="news">News</label>
-                                                <textarea name="news" class="form-control" id="basicTextarea" rows="3">{{ $footer ? $footer->news : '' }}</textarea>
+                                                <textarea name="news" class="form-control" rows="3">{{ $footer ? $footer->news : '' }}</textarea>
                                                 @if ($errors->has('news'))
                                                 <small class="text-danger">{{ $errors->first('news') }}</small>
                                                 @endif
@@ -41,7 +41,7 @@
                                         <div class="col-md-12 mb-1">
                                             <fieldset class="form-group">
                                                 <label for="copyright">Copyright</label>
-                                                <textarea name="copyright" class="form-control" id="basicTextarea" rows="3">{{ $footer ? $footer->copyright : '' }}</textarea>
+                                                <textarea name="copyright" class="form-control" rows="3">{{ $footer ? $footer->copyright : '' }}</textarea>
                                                 @if ($errors->has('copyright'))
                                                 <small class="text-danger">{{ $errors->first('copyright') }}</small>
                                                 @endif

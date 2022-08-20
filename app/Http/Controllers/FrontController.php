@@ -7,11 +7,13 @@ use App\Models\Admin\TopBar;
 use Illuminate\Http\Request;
 use App\Models\Admin\MainMenu;
 use App\Models\Admin\Appearance;
+use App\Models\Admin\CustomCode;
 use App\Models\Admin\Facebook;
 use App\Models\Admin\Facility;
 use App\Models\Admin\Footer;
 use App\Models\Admin\Phone;
 use App\Models\Admin\Slider;
+use App\Models\Admin\Theme;
 
 class FrontController extends Controller
 {
@@ -26,6 +28,8 @@ class FrontController extends Controller
         $fb = Facebook::first();
         $facilities = Facility::all();
         $footer = Footer::first();
-        return view('welcome', compact('top', 'app', 'menus', 'socials', 'sliders', 'phones', 'fb', 'facilities', 'footer'));
+        $theme = Theme::first();
+        $custom = CustomCode::first();
+        return view('welcome', compact('theme', 'custom', 'top', 'app', 'menus', 'socials', 'sliders', 'phones', 'fb', 'facilities', 'footer'));
     }
 }

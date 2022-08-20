@@ -10,7 +10,9 @@ use App\Http\Controllers\Admin\PhoneController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\SocialController;
 use App\Http\Controllers\Admin\TopBarController;
+use App\Http\Controllers\CustomCodeController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ThemeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -89,5 +91,13 @@ Route::middleware(['auth'])->group(function() {
         Route::get('/my-account', [PasswordController::class, 'index'])->name('admin.password');
         Route::post('/my-account/profile', [PasswordController::class, 'profile'])->name('admin.profile.update');
         Route::post('/my-account/password', [PasswordController::class, 'password'])->name('admin.password.update');
+
+        // Theme;
+        Route::get('/theme', [ThemeController::class, 'index'])->name('admin.theme');
+        Route::post('/theme', [ThemeController::class, 'update'])->name('admin.theme.update');
+
+        // Custom Code;
+        Route::get('/custom-code', [CustomCodeController::class, 'index'])->name('admin.custom.code');
+        Route::post('/custom-code', [CustomCodeController::class, 'update'])->name('admin.custom.code.update');
     });
 });

@@ -87,6 +87,8 @@
                 </a>
                 <ul class="menu-content">
                     <li class="{{ Route::is('admin.appearance') ? 'active' : '' }}"><a class="menu-item" href="{{ route('admin.appearance') }}">Appearance</a></li>
+                    <li class="{{ Route::is('admin.theme') ? 'active' : '' }}"><a class="menu-item" href="{{ route('admin.theme') }}">Theme</a></li>
+                    <li class="{{ Route::is('admin.custom.code') ? 'active' : '' }}"><a class="menu-item" href="{{ route('admin.custom.code') }}">Custom Code</a></li>
                 </ul>
             </li>
             
